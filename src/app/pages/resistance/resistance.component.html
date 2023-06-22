@@ -1,31 +1,55 @@
-<div class="container">
-    <select class="form-select" name="b1" id="">
-        <option *ngFor="let item of band1" value={{item}} >{{item}}</option>
+<div class="container" style="margin-top: 20px;">
+  <h1 class="text-center">Calculadora de resistencias</h1>
+    <select style="margin: 10px;" class="form-select" #b1 (change)="setB1(b1.value)">
+        <option selected disabled >Select</option>
+        <option style="color: bisque;" *ngFor="let item of colors" class="text-capitalize" [value]="item" [style.background]="item" >{{item}}</option>
     </select>
-    <select class="form-select" name="b2" id="">
-        <option *ngFor="let item of band1" value={{item}} >{{item}}</option>
+    <select style="margin: 10px;" class="form-select" #b2 (change)="setB2(b2.value)">
+      <option selected disabled >Select</option>
+        <option style="color: bisque;" *ngFor="let item of colors" class="text-capitalize" [value]="item" [style.background]="item" >{{item}}</option>
     </select>
-    <select class="form-select" name="b3" id="">
-        <option *ngFor="let item of band1" value={{item}} >{{item}}</option>
+    <select style="margin: 10px;" class="form-select" #b3 (change)="setB3(b3.value)">
+      <option selected disabled >Select</option>
+        <option style="color: bisque;" *ngFor="let item of colors" class="text-capitalize" [value]="item" [style.background]="item" >{{item}}</option>
     </select>
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="tol" id="golden" value="0.05">
+    <div class="form-check" style="margin: 10px;">
+        <input class="form-check-input" type="radio" (change)="setTol(tol.value)" #tol name="tol" [value]="0.05">
         <label class="form-check-label" for="golden">
           Gold
         </label>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="tol" id="silver" value="0.1">
+      <div class="form-check" style="margin: 10px;">
+        <input class="form-check-input" type="radio" (change)="setTol(tol2.value)" #tol2 name="tol" [value]="0.1">
         <label class="form-check-label" for="silver">
           Silver
         </label>
       </div>
     <button class="btn btn-primary" (click)="calculate()" color="primary">Calculate</button>
     <br>
-    <h1>{{b1}}</h1>
-    <h1>{{b2}}</h1>
-    <h1>{{b3}}</h1>
-    <h1>Value: {{val}}</h1>
-    <h1>Min: {{min}}</h1>
-    <h1>Max: {{max}}</h1>
+    <table *ngIf="val != 0" class="table table-striped" style="margin: 10px;">
+      <thead>
+        <tr>
+          <td>Color 1</td>
+          <td>Color 2</td>
+          <td>Color 3</td>
+          <td>Tolerance</td>
+          <td>Value</td>
+          <td>Min</td>
+          <td>Max</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-capitalize">
+          <td style="color: bisque;" [style.background]="b1.value">{{b1.value}}</td>
+          <td style="color: bisque;" [style.background]="b1.value">{{b2.value}}</td>
+          <td style="color: bisque;" [style.background]="b1.value">{{b3.value}}</td>
+          <td style="color: white;" [style.background]="tolColor">{{tole}}</td>
+          <td>{{val}}</td>
+          <td>{{min}}</td>
+          <td>{{max}}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    
 </div>

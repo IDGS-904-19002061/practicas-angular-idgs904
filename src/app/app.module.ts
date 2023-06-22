@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { DistanceModule } from './pages/distancia/distance.module';
 import { ResistanceComponent } from './pages/resistance/resistance.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ResistanceComponent } from './pages/resistance/resistance.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     CommonModule,
-    DistanceModule
+    DistanceModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
