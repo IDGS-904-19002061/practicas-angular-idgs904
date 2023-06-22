@@ -1,0 +1,21 @@
+<div class="container">
+    <mat-form-field class="example-form-field">
+      <input matInput type="text" [(ngModel)]="x1" placeholder="X 1">
+    </mat-form-field>    
+    <br>
+    <mat-form-field class="example-form-field">
+      <input matInput type="text" [(ngModel)]="y1" placeholder="Y 1">
+    </mat-form-field> 
+    <br> 
+    <mat-form-field class="example-form-field">
+      <input matInput type="text" [(ngModel)]="x2" placeholder="X 2">
+    </mat-form-field>    
+    <br>
+    <mat-form-field class="example-form-field">
+      <input matInput type="text" [(ngModel)]="y2" placeholder="Y 2">
+    </mat-form-field> 
+    <br> 
+  <button mat-raised-button (click)="calculate()" color="primary">Calculate</button>
+  <br>
+  <h1>Distance: {{res}}</h1>
+  </div>

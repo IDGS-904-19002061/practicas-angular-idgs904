@@ -1,0 +1,31 @@
+<div class="container">
+    <select class="form-select" name="b1" id="">
+        <option *ngFor="let item of band1" value={{item}} >{{item}}</option>
+    </select>
+    <select class="form-select" name="b2" id="">
+        <option *ngFor="let item of band1" value={{item}} >{{item}}</option>
+    </select>
+    <select class="form-select" name="b3" id="">
+        <option *ngFor="let item of band1" value={{item}} >{{item}}</option>
+    </select>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="tol" id="golden" value="0.05">
+        <label class="form-check-label" for="golden">
+          Gold
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="tol" id="silver" value="0.1">
+        <label class="form-check-label" for="silver">
+          Silver
+        </label>
+      </div>
+    <button class="btn btn-primary" (click)="calculate()" color="primary">Calculate</button>
+    <br>
+    <h1>{{b1}}</h1>
+    <h1>{{b2}}</h1>
+    <h1>{{b3}}</h1>
+    <h1>Value: {{val}}</h1>
+    <h1>Min: {{min}}</h1>
+    <h1>Max: {{max}}</h1>
+</div>
