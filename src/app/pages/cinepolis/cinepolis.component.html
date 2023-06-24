@@ -1,0 +1,28 @@
+<div class="container" style="margin-top: 50px;">
+    <label for="name">Nombre</label>
+    <input type="text" class="form-control" #name id="name" (change)="setName(name.value)" >
+    <label for="buyers">Compradores</label>
+    <input type="number" min="1" placeholder="0" class="form-control" #buyers id="buyers" (change)="setBuyers(buyers.value)" id="buyers">
+    <div class="form-check" style="margin: 10px;">
+        <input class="form-check-input" type="radio" (change)="setCard(tol.value)" #tol name="tol" [value]="1">
+        <label class="form-check-label" for="golden">
+          Si
+        </label>
+      </div>
+      <div class="form-check" style="margin: 10px;">
+        <input class="form-check-input" type="radio" (change)="setCard(tol2.value)" #tol2 name="tol" [value]="0">
+        <label class="form-check-label" for="silver">
+          No
+        </label>
+      </div>
+      <label for="tickets">Cantidad boletos</label>
+      <input type="number" placeholder="0" #tickets id="tickets" (change)="setTickets(tickets.value)" min="1" class="form-control">
+      <button class="btn btn-primary" (click)="calculate()" color="primary">Calcular</button>
+      <br>
+      <br>
+
+      <div class="container">
+        <h1>Cliente: {{name.value}}</h1>
+        <h1>Total a pagar: {{res}}</h1>
+      </div>
+</div>

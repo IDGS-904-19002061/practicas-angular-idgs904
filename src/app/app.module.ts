@@ -7,11 +7,13 @@ import { CommonModule } from '@angular/common';
 import { DistanceModule } from './pages/distancia/distance.module';
 import { ResistanceComponent } from './pages/resistance/resistance.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CinepolisComponent } from './pages/cinepolis/cinepolis.component';
+import { CinepolisModule } from './pages/cinepolis/cinepolis.module';
+import { ResistanceModule } from './pages/resistance/resistance.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ResistanceComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +21,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserAnimationsModule,
     CommonModule,
     DistanceModule,
-    NgbModule
+    NgbModule,
+    ResistanceModule,
+    CinepolisModule
   ],
   providers: [],
   bootstrap: [AppComponent]
