@@ -10,10 +10,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CinepolisComponent } from './pages/cinepolis/cinepolis.component';
 import { CinepolisModule } from './pages/cinepolis/cinepolis.module';
 import { ResistanceModule } from './pages/resistance/resistance.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { PizzaComponent } from './pages/pizza/pizza.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
+    PizzaComponent,
   ],
   imports: [
     BrowserModule,
